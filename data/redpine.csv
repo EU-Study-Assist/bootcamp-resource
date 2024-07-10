@@ -1,0 +1,451 @@
+PlotNum,CoverType,TreeNum,DBH,HT
+5,Red pine,46,13,51
+5,Red pine,50,8.3,54
+5,Red pine,54,8.2,48
+5,Red pine,56,11.8,55
+5,Red pine,63,9,54
+5,Red pine,71,12.5,46
+11,Cut,47,25.3,90
+13,Red pine,1,16.2,85
+13,Red pine,2,18.8,86
+13,Red pine,7,22.2,90
+13,Red pine,9,20.8,88
+13,Red pine,11,18.8,86
+13,Red pine,12,16.8,86
+15,Aspen,38,11.1,81
+15,Aspen,39,15.2,72
+15,Aspen,40,15.8,80
+18,Red pine,29,11.8,63.1
+22,Red pine,28,10,54
+22,Red pine,29,8.9,52
+22,Red pine,36,8.4,47
+22,Red pine,52,8.9,50
+22,Red pine,59,7.5,47
+22,Red pine,61,7,51
+22,Red pine,73,6.6,48
+22,Red pine,75,7.4,49
+23,Red pine,2,18.9,92
+23,Red pine,23,17.9,101
+24,Red pine,4,15.3,103
+24,Red pine,18,9.4,100
+24,Red pine,30,11.7,103
+24,Red pine,38,12.9,103
+24,Red pine,46,11.2,101
+24,Red pine,59,12.4,103
+24,Red pine,68,13.3,100
+24,Red pine,70,5.6,80
+24,Red pine,90,8.1,96
+24,Red pine,99,11.4,102
+24,Red pine,109,10.4,92
+24,Red pine,110,8.9,98
+24,Red pine,111,13.1,96
+24,Red pine,113,11.8,100
+24,Red pine,115,6.7,95
+25,Red pine,40,19.3,70
+25,Red pine,48,15.3,69
+25,Red pine,54,12.1,63
+25,Red pine,59,14,68
+25,Red pine,62,12.1,67
+29,Aspen,29,3.1,38
+29,Aspen,30,3.6,37
+29,Aspen,43,10.2,65
+30,Red pine,4,19.9,96
+30,Red pine,8,24.7,103
+30,Red pine,12,24,90
+31,Red pine,47,19,79
+31,Red pine,49,18.3,79.2
+31,Red pine,51,17.6,75.8
+31,Red pine,53,14.6,76
+31,Red pine,63,6.8,55
+32,Red pine,3,18.8,89
+32,Red pine,12,18.9,79
+32,Red pine,32,13.5,70
+33,Red pine,13,18.7,92
+33,Red pine,28,18.5,87
+33,Red pine,53,11.6,76
+34,Paper birch,26,23.9,89
+34,Paper birch,56,13.7,65
+35,Red pine,32,15.9,91
+35,Red pine,37,19.9,95
+35,Red pine,38,16.2,99
+40,White spruce,4,32.3,104
+41,Red pine,1,27.7,108
+41,Red pine,5,24.5,101
+41,Red pine,18,25.6,102
+41,Red pine,19,21.8,95
+43,White pine,64,9.7,55
+45,Red pine,1,23.7,110
+45,Red pine,2,24.3,107
+45,Red pine,13,27.3,102
+45,Red pine,17,22.1,107
+49,Aspen,104,11.4,56
+49,Aspen,169,9.3,42
+49,Aspen,172,8.1,46
+53,Aspen,2,20.6,94
+53,Aspen,3,23.8,97
+65,Upland mixed hardwoods,22,10.2,65
+65,Upland mixed hardwoods,24,11.8,64
+79,Red pine,84,10.8,82
+82,Cut,1,5.5,22
+82,Cut,3,2.1,15
+82,Cut,4,2.4,16
+83,Right of way,1,21,96
+83,Right of way,2,23.2,106
+83,Right of way,6,23.1,105
+83,Right of way,11,24.3,104
+89,Red pine,5,21.3,94
+89,Red pine,7,20.6,95
+89,Red pine,39,16.2,92
+93,Red pine,1,19.1,104
+93,Red pine,3,19.6,102
+93,Red pine,4,19.9,100
+93,Red pine,18,20.4,102
+93,Red pine,24,14.3,102
+93,Red pine,25,19.4,104
+93,Red pine,28,19.8,103
+93,Red pine,33,23,103
+93,Red pine,37,8.6,50
+98,Aspen,24,10.1,58
+98,Aspen,25,12.9,60
+100,White spruce,30,22.9,108.7
+100,White spruce,63,8.9,35
+100,White spruce,64,10.2,37
+100,White spruce,72,8.3,42
+101,Red pine,64,9.5,44
+101,Red pine,65,8.2,46
+101,Red pine,67,7.6,43
+101,Red pine,72,9.1,50
+101,Red pine,73,9.9,43
+101,Red pine,78,8.5,41
+102,Red pine,48,8.7,63
+102,Red pine,50,7,62
+102,Red pine,60,10.8,64
+102,Red pine,61,10.6,64
+102,Red pine,62,12.8,60
+102,Red pine,65,8.2,65
+102,Red pine,67,9.7,65
+102,Red pine,68,9.5,64
+102,Red pine,70,7,64
+102,Red pine,74,7.8,64
+102,Red pine,75,7.3,62
+102,Red pine,77,7.2,55
+102,Red pine,78,10.2,54
+102,Red pine,80,9.9,63
+102,Red pine,88,6.9,62
+102,Red pine,90,7.2,62
+102,Red pine,91,8.8,64
+102,Red pine,92,8.2,62
+102,Red pine,93,9.9,64
+102,Red pine,94,6.9,62
+102,Red pine,95,8.3,64
+102,Red pine,97,13.2,60
+102,Red pine,98,9.1,62
+102,Red pine,103,6.8,63
+102,Red pine,115,7.7,46
+102,Red pine,124,7.3,45
+102,Red pine,132,7.2,64
+102,Red pine,133,5,56
+103,Red pine,38,16,80
+103,Red pine,48,10.4,70
+103,Red pine,50,11.8,83
+103,Red pine,51,11.1,80
+103,Red pine,52,12.2,80
+103,Red pine,54,4,40
+103,Red pine,60,3.4,36
+103,Red pine,73,12.9,72
+110,Scotch pine,11,17,100
+110,Scotch pine,39,20.2,99
+110,Scotch pine,49,12.4,90
+111,Red pine,16,19.6,70
+111,Red pine,19,16.1,65
+111,Red pine,39,14.7,75
+113,Red pine,4,9.4,72
+113,Red pine,7,24.3,109
+113,Red pine,15,16.8,85
+113,Red pine,24,18.5,90
+113,Red pine,25,11.5,92
+113,Red pine,49,14.5,82
+114,Red pine,72,7.1,43
+114,Red pine,75,6.9,40
+114,Red pine,92,3.8,28
+114,Red pine,95,6,44
+117,Aspen,11,24.5,102
+119,Jack pine,62,11.3,72
+119,Jack pine,65,11.7,70
+119,Jack pine,70,10.4,63
+121,Red pine,42,12.6,85
+121,Red pine,84,10.7,63
+121,Red pine,89,11.6,60
+122,Red pine,47,12.4,77
+123,Red pine,6,17.2,101
+123,Red pine,28,10,56
+123,Red pine,29,4.8,41
+125,Jack pine,48,8.8,43
+126,Aspen,52,3.4,23
+127,Red pine,39,11.9,48
+127,Red pine,47,19.3,84
+129,Right of way,3,23.1,106
+129,Right of way,11,13.2,80
+130,Red pine,1,21.1,94
+130,Red pine,2,16.1,83
+130,Red pine,3,16.1,83
+130,Red pine,8,15.1,82
+130,Red pine,10,20.7,85
+130,Red pine,12,17.5,85
+130,Red pine,17,21.6,85
+130,Red pine,24,14.8,80
+131,Red pine,6,20.8,87
+131,Red pine,17,22.8,80
+131,Red pine,35,20,82
+131,Red pine,36,18.1,84
+132,Red pine,2,14.3,94
+132,Red pine,3,11.9,90
+132,Red pine,5,16.5,93
+132,Red pine,15,15.5,87
+132,Red pine,37,13.1,86
+132,Red pine,56,16.7,88
+136,White pine,21,14.5,110
+137,Red pine,53,17.9,70.2
+137,Red pine,64,18.3,83.6
+137,Red pine,68,12,48.8
+140,Red pine,1,19,115
+140,Red pine,3,16.8,118
+140,Red pine,7,18.9,85.9
+140,Red pine,10,20.8,85
+140,Red pine,15,16.5,100
+141,Red pine,1,19.7,118
+141,Red pine,14,14.7,60
+141,Red pine,23,24.9,100
+143,Swamp conifers,21,25.4,102
+145,Red pine,8,16.7,89
+145,Red pine,11,18.2,83
+145,Red pine,20,12.7,95
+145,Red pine,53,12.4,71
+145,Red pine,63,11,80
+146,Aspen,26,6.5,62
+154,Upland mixed hardwoods,3,15.8,58
+168,Red pine,30,11,38
+168,Red pine,38,10.6,43.5
+168,Red pine,50,7,47
+168,Red pine,51,8,43
+172,Red pine,65,11.7,60
+172,Red pine,126,13,58
+172,Red pine,129,12.5,63
+178,Red pine,38,4.8,18
+181,Red pine,48,15.9,75
+181,Red pine,50,15.1,81.4
+202,Red pine,60,8.6,65
+202,Red pine,65,5,60
+202,Red pine,88,11.8,60
+202,Red pine,96,9.1,60
+203,Red pine,54,20.5,78
+203,Red pine,90,4.5,46
+203,Red pine,93,2.3,22
+203,Red pine,116,8.4,60
+204,Red pine,87,18.4,81
+204,Red pine,88,15.4,78
+204,Red pine,98,18.6,86
+208,Red pine,1,26.9,107
+208,Red pine,6,20,95
+209,Red pine,2,14.9,92
+209,Red pine,4,14.3,107
+209,Red pine,5,16.4,95
+209,Red pine,7,14.4,101
+209,Red pine,9,13.6,100
+209,Red pine,10,15.2,94.7
+209,Red pine,22,12.9,93
+209,Red pine,56,14.4,91
+210,Red pine,36,9.7,52
+210,Red pine,38,10.1,53
+210,Red pine,39,10,56
+210,Red pine,40,9.8,54
+210,Red pine,41,7.3,31
+210,Red pine,51,10.3,56
+210,Red pine,59,12.2,59
+210,Red pine,75,11.1,54
+211,Balsam fir,38,18.2,63
+211,Balsam fir,45,15.4,55
+214,Red pine,53,12,57
+214,Red pine,54,10.4,51
+214,Red pine,80,9.8,60
+216,Red pine,1,18,92
+216,Red pine,2,15,91
+216,Red pine,3,19.1,85
+216,Red pine,6,21.9,88
+216,Red pine,9,15.4,82
+216,Red pine,11,16,70
+217,Red pine,40,16.8,70.6
+217,Red pine,47,11.9,70
+217,Red pine,57,14,65
+217,Red pine,69,5.3,23
+217,Red pine,71,6.4,41
+218,Red pine,4,20.5,86
+218,Red pine,32,19.7,84
+218,Red pine,33,18,89.1
+218,Red pine,42,4.7,35
+218,Red pine,43,7.7,49.1
+222,Red pine,8,20,96
+222,Red pine,9,14.7,94
+222,Red pine,10,15.7,94
+222,Red pine,11,16,94
+222,Red pine,21,16.9,101
+223,Red pine,1,23.5,82
+223,Red pine,2,21.6,85
+223,Red pine,3,10.4,51
+223,Red pine,23,13.2,73
+224,Red pine,42,17.5,83
+224,Red pine,46,16.3,75
+225,Red pine,1,16,82
+225,Red pine,10,15,91
+225,Red pine,15,14.3,90
+225,Red pine,16,15.1,92
+225,Red pine,25,15.3,76
+225,Red pine,29,10.9,82
+227,Jack pine,6,22.8,91
+227,Jack pine,43,16.4,76
+228,Red pine,2,13.2,76
+228,Red pine,5,16.5,81
+228,Red pine,9,17.3,85
+228,Red pine,22,13.8,83
+228,Red pine,42,12.8,79
+228,Red pine,43,11.9,79
+228,Red pine,48,10.9,84
+231,Red pine,4,23,100
+231,Red pine,13,21.8,107
+231,Red pine,14,23.8,106
+231,Red pine,15,22.5,108
+233,Red pine,25,14.2,71
+233,Red pine,58,5.5,42
+233,Red pine,59,7.2,57
+236,Red pine,3,24.4,100
+236,Red pine,4,21.3,107
+236,Red pine,7,26.1,112
+238,Red pine,1,22.3,98
+238,Red pine,2,22.2,103
+242,Red pine,47,12.8,63
+242,Red pine,48,14.6,67
+242,Red pine,50,15.2,49
+242,Red pine,52,16,57
+242,Red pine,56,14.2,59
+242,Red pine,58,12.8,51
+248,Red pine,7,16.8,58
+248,Red pine,17,12.8,94
+248,Red pine,18,14.7,95
+248,Red pine,25,16.8,101
+249,Red pine,32,9.9,56.6
+249,Red pine,52,10,57
+249,Red pine,53,10.2,45
+274,Paper birch,22,14.1,35
+275,Aspen,4,27.8,88
+304,Red pine,103,8.8,41
+304,Red pine,138,11.1,49
+305,Red pine,67,9.2,69
+305,Red pine,72,6.1,54
+305,Red pine,74,8.8,62
+306,Red pine,1,17.2,93
+306,Red pine,20,26.2,101
+306,Red pine,21,19.7,91
+306,Red pine,31,18.9,84
+308,Red pine,8,18,95
+308,Red pine,11,15.8,95
+308,Red pine,12,18.5,98
+308,Red pine,15,19.5,97
+308,Red pine,21,22.8,96
+310,Cut,33,22.5,89
+313,Aspen,2,12.4,53
+313,Aspen,23,22.4,99
+313,Aspen,32,16.5,63
+313,Aspen,41,14.4,77
+314,Red pine,3,17.1,81
+314,Red pine,7,18.7,79
+314,Red pine,34,17.8,101
+314,Red pine,35,15,90
+315,Red pine,38,14.6,68
+315,Red pine,41,13.2,66
+315,Red pine,45,9.3,52
+315,Red pine,72,4.6,17.9
+315,Red pine,73,9,49
+316,Red pine,10,28.3,62
+320,Red pine,2,27,114
+320,Red pine,4,23.1,95
+320,Red pine,7,24.8,116
+320,Red pine,8,22.3,110
+321,Aspen,29,8,39
+322,Red pine,17,10.5,48
+322,Red pine,28,12.2,52
+323,Red pine,73,10.9,53
+323,Red pine,76,11.6,54
+323,Red pine,78,11.9,58
+323,Red pine,111,10,54
+324,Red pine,43,8.1,41
+324,Red pine,60,7.8,42
+325,Red pine,39,12.3,67
+325,Red pine,40,4.5,46
+325,Red pine,44,10.1,61.5
+325,Red pine,47,10.7,68
+328,Aspen,34,4.4,32
+329,Red pine,23,15.9,103
+329,Red pine,28,14.9,95
+329,Red pine,31,14.7,97
+329,Red pine,37,14.9,105
+329,Red pine,44,15.3,77
+330,Grass,8,9.5,70
+331,White spruce,42,15.6,81
+333,Red pine,2,13.6,71
+333,Red pine,3,14.9,95
+333,Red pine,17,17.8,98
+333,Red pine,22,17.3,102
+333,Red pine,30,17.2,97
+333,Red pine,35,13.5,96
+333,Red pine,59,11.3,85
+334,Red pine,2,20.7,100
+334,Red pine,10,16.1,82
+334,Red pine,37,14.7,89
+335,Red pine,34,14.9,80
+335,Red pine,40,14,90
+335,Red pine,58,17.4,90
+335,Red pine,68,10.5,84
+335,Red pine,71,6.3,56
+338,Red pine,1,8.4,66
+338,Red pine,2,14.1,75
+338,Red pine,3,12.6,73
+338,Red pine,20,14.2,70
+339,Red pine,1,20.3,90
+339,Red pine,31,19.9,95
+339,Red pine,49,15.5,88
+340,Red pine,1,25.8,97
+340,Red pine,12,21.9,93
+340,Red pine,18,20.6,120
+340,Red pine,19,20.6,101
+341,Red pine,6,18.5,100
+341,Red pine,8,21.9,95
+341,Red pine,10,16.8,87
+341,Red pine,12,23.3,90
+343,Red pine,6,14.6,91
+343,Red pine,8,13.1,93
+343,Red pine,48,13,88
+343,Red pine,58,3.5,35
+345,Aspen,5,25,88
+346,Right of way,43,15,73
+346,Right of way,44,11.5,74
+347,Red pine,24,19.6,76
+348,Aspen,24,15.2,78
+348,Aspen,28,13.7,65
+348,Aspen,32,10.4,37
+349,Aspen,72,13,53
+349,Aspen,111,6.7,47
+352,Red pine,27,11.8,57
+352,Red pine,28,9.4,56
+352,Red pine,38,9.6,33
+352,Red pine,39,10.4,35
+352,Red pine,40,9.9,50
+352,Red pine,51,8,48
+352,Red pine,75,9.5,49
+375,Right of way,79,12,47
+375,Right of way,88,11,45
+382,Right of way,3,13.2,61.7
+382,Right of way,4,15.2,54.9
+400,Cut,8,17.5,85
+400,Cut,31,15.5,85
+800,Red pine,6,8,24
+800,Red pine,8,6.1,22
