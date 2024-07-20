@@ -187,3 +187,8 @@ my_tree <- factor(my_tree,
                   ordered = TRUE
                   )
 # Functions
+
+
+# Data Structure
+
+# Functions 2
