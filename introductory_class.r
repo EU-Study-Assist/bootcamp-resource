@@ -1,4 +1,4 @@
-# Simple Operations
+# Simple Operations -------------------------------------------------------
 
 2 + 2
 2 - 5
@@ -9,7 +9,7 @@
 3^5
 4 * 4
 
-## Order of Operation
+## Order of Operation -----------------------------------------------------
 4 + 3 * 2
 4 + (3 * 2)
 (4 + 3) * 2
@@ -17,7 +17,7 @@
 # BODMAS
 # PEMDAS
 
-# Assigning Variables
+# Assigning Variables -----------------------------------------------------
 
 agatha <- 20
 thandekile = 21
@@ -27,7 +27,7 @@ agatha
 thandekile
 anap
 
-# The Operators
+# The Operators -----------------------------------------------------------
 agatha > thandekile
 thandekile > agatha
 
@@ -42,14 +42,14 @@ dare < promise
 
 nomvume <= fisola
 
-## Conditionals
-### AND (&)
+## Conditionals -----------------------------------------------------------
+### AND (&) ---------------------------------------------------------------
 TRUE & TRUE
 TRUE & FALSE
 FALSE & TRUE
 FALSE & FALSE
 
-### OR (|)
+### OR (|) ----------------------------------------------------------------
 TRUE | TRUE
 TRUE | FALSE
 FALSE | TRUE
@@ -63,9 +63,9 @@ nomvume >= dare & fisola == promise
 17 < 15 | 20 < 17
 15 > 17 | 20 > 17
 
-# Data Types
+# Data Types --------------------------------------------------------------
 
-## Strings / Characters
+## Strings / Characters ---------------------------------------------------
 
 tree_1 <- "eucalyptus species"
 tree_1
@@ -92,9 +92,9 @@ is.character(tree_1)
 is.character(promise)
 is.character("promise")
 
-## Numeric
+## Numeric ----------------------------------------------------------------
 
-### Double/Float/ Decimal number
+### Double/Float/ Decimal number ------------------------------------------
 
 class(12.3)
 typeof(12.3)
@@ -108,14 +108,14 @@ is.double(12)
 is.numeric(12)
 is.numeric(12L)
 
-### Integers/ Whole numbers
+### Integers/ Whole numbers -----------------------------------------------
 
 class(12L)
 typeof(12L)
 
 is.integer(12L)
 
-## Boolean / Logical
+## Boolean / Logical ------------------------------------------------------
 class(TRUE)
 typeof(TRUE)
 class(T)
@@ -126,12 +126,12 @@ is.logical(TRUE)
 is.logical(FALSE)
 is.logical(NA)
 
-## Date/Time
+## Date/Time --------------------------------------------------------------
 class(as.Date("2024/07/19"))
 
-# Data Structure
+# Data Structure ----------------------------------------------------------
 
-## Vectors
+## Vectors ----------------------------------------------------------------
 ?c
 help(c)
 
@@ -141,7 +141,8 @@ class(beautiful_people)
 
 beautiful_people_1 <- as.character(beautiful_people)
 
-### Value coercion
+
+### Value coercion --------------------------------------------------------
 num_ber <- c(1, 2, 3, 4, 5, 6)
 num_ber
 class(num_ber)
@@ -163,7 +164,7 @@ my_num2 <- -10:10
 class(my_num2)
 as.logical(my_num2)
 
-# Sequences and replications
+# Sequences and replications ----------------------------------------------
 ?seq()
 seq(from = 1, to = 30, by = 1)
 seq(1, 30, 2)
@@ -186,9 +187,17 @@ my_tree <- factor(my_tree,
                   levels = c(4, 3, 2, 1),
                   ordered = TRUE
                   )
-# Functions
+# Functions ---------------------------------------------------------------
 
+## Statistical Functions --------------------------------------------------
 
-# Data Structure
+# Character Functions -----------------------------------------------------
 
-# Functions 2
+# Data Structure ----------------------------------------------------------
+
+# Vector ------------------------------------------------------------------
+
+# Matrices ----------------------------------------------------------------
+
+# Data Frames -------------------------------------------------------------
+
