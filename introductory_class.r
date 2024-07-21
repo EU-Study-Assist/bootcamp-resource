@@ -163,7 +163,7 @@ my_num2 <- -10:10
 class(my_num2)
 as.logical(my_num2)
 
-# Sequences and repetitions
+# Sequences and replications
 ?seq()
 seq(from = 1, to = 30, by = 1)
 seq(1, 30, 2)
