@@ -23,6 +23,11 @@ agatha <- 20
 thandekile = 21
 assign("anap", 19)
 
+soso <- 17
+fisola <- 20
+promise <- 20
+nomvume <- 17
+dare <- 15
 agatha
 thandekile
 anap
@@ -30,13 +35,6 @@ anap
 # The Operators -----------------------------------------------------------
 agatha > thandekile
 thandekile > agatha
-
-soso <- 17
-fisola <- 20
-promise <- 20
-nomvume <- 17
-dare <- 15
-
 dare < promise
 15 < 20
 
@@ -148,14 +146,14 @@ num_ber
 class(num_ber)
 as.character(num_ber)
 
-species <- c(specie_1, species_2, species_3, species_4)
+species <- c(species_1, species_2, species_3, species_4)
 class(species)
 species
 species_num <-as.numeric(species)
 class(species_num)
 
 trees <- c(tree_1, tree_2, tree_3, tree_4)
-class(trees)
+  class(trees)
 as.logical(trees)
 
 my_num <- 0:30
@@ -171,6 +169,8 @@ seq(1, 30, 2)
 seq(2, 50, 2)
 seq(0, 90, 3)
 
+num <- 1:100
+num
 
 species <- c(species_1, species_2, species_3, species_4)
 my_tree <- rep(species, 30)
@@ -189,20 +189,105 @@ my_tree <- factor(my_tree,
                   )
 # Functions ---------------------------------------------------------------
 
-## Statistical Functions --------------------------------------------------
+## Simple Functions --------------------------------------------------
+num
+
+min(num)
+max(num)
+median(num)
+mean(num)
+plot(num)
+min(1:6)
+range(num)
+sd(num)
+var(num)
+length(num)
+
+my_tree
+length(my_tree)
+
+student_names <- c("promise", "thandekile", "dare", 
+                   "nomvume", "nangamso", "agatha",
+                   "faith")
+
+gender <- c("male", "female", "male",
+            "female", "female", "female", "male")
+
+unique(student_names)
+length(student_names)
+length(gender)
+
+unique(gender)
+length(unique(gender))
+
+length(my_tree)
+unique(my_tree)
+length(unique(my_tree))
+
+sqrt(340)
+sqrt(length(num))
+sqrt(100)
 
 ### Generating Random Numbers ---------------------------------------------
+set.seed(937476)
+
+my_rand <- rnorm(n = 100, mean = 5.5, sd = 15)
+
+?round
+help(round)
+
+round(my_rand, digits = 0)
+
+ceiling(my_rand)
+floor(my_rand)
+
+args(rnorm)
+help(rnorm)
+help(unique)
+?rnorm
+?length
 
 ## Character Functions ----------------------------------------------------
+my_tree
+
+toupper(my_tree)
+tolower(my_tree)
+stringr::str_to_title()
 
 ### Letters ---------------------------------------------------------------
+letters
+LETTERS
+
+month.name
+month.abb
 
 ## Creating a Custom Function ---------------------------------------------
+my_rand + num
+my_rand/num
+
+tree_diameter <- rnorm(50, mean = 1, sd = 2)
+tree_height <- runif(50, min = 5, max = 27)
+tree_volume <- rnorm(50, mean = 70, sd = 15)
+
+metric_converter <- function(x) {
+  x * 1000
+}
+
+metric_converter(tree_diameter)
+metric_converter(tree_height)
+metric_converter(tree_volume)
 
 
+?runif
+num + 5
+
+num + c(5, 9, 10)
+length(num)/3
+length(num)/2
+
+sum(my_rand, num)
 
 # Data Structure ----------------------------------------------------------
-
 
 ## Vector -----------------------------------------------------------------
 
