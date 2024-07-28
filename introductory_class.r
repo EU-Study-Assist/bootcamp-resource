@@ -252,7 +252,7 @@ my_tree
 
 toupper(my_tree)
 tolower(my_tree)
-stringr::str_to_title()
+
 
 ### Letters ---------------------------------------------------------------
 letters
@@ -458,30 +458,187 @@ pinus_height[pinus_height[1:10, "fertilized"] > 4.5, ]
 
 pinus_height[pinus_height[ , "control"] > 3.5, ]
 
+letters[5:26]
+letters[ c ( seq (2, 26, by = 2) ) ]
+
+set.seed(123)
+starters <- round(rnorm(n = 10, mean = 2.0, sd = .5), 1)
+growers <- round(rnorm(n = 10, mean = 5.6, sd = .2), 1)
+finishers <- round(rnorm(n = 10, mean = 10, sd = 1.7), 1)
+
+starters
+growers
+finishers
+
+poultry <- matrix(c(starters, growers, finishers), ncol = 3)
+
+colnames(poultry) <- c("starters", "growers", "finishers")
+poultry
+
+poultry[,2]
+poultry[, "growers"]
+poultry[(poultry[, "starters"] >= 2.0), "growers"]
+poultry[,]
+
 ### Transpose -------------------------------------------------------------
+t(poultry)
 
 ### Operations (binding) --------------------------------------------------
+rownames(pinus_height) <- NULL
+pinus_height
+
+dim(pinus_height)
+dim(poultry)
+
+#### Combine columns
+cbind(pinus_height, poultry)
+poultry
+
+set.seed(123)
+
+poultry_2 <- poultry[, 1:2]
+
+poultry_2
+pinus_height
+
+rownames(pinus_height) <- rep("durban", 10)
+rownames(poultry_2) <- rep("cape_town", 10)
+rbind(poultry_2, pinus_height)
 
 ### Mathematical Operations -----------------------------------------------
-
+poultry_2 + pinus_height
+poultry_2 * 3
+poultry_2
 
 ## Lists ------------------------------------------------------------------
+my_list <- list(c(1:30))
+my_list
 
+c(1:30)
+
+my_list <- list(my_list)
+my_list
 ### Check object type
+is.list(my_list)
+
+research <- list(treatment_tree_diameter, tree_diameter,
+                 pinus_height, my_list, tree_height, poultry,
+                 poultry_2)
+
+research
+names(research) <- c(letters[1:7])
+
+names(tree_diameter) <- "dia"
+names(pinus_fake) <- "fake"
+names(pinus_fake)
+
+pinus_fake
+research
 
 ### Accessing -------------------------------------------------------------
-
+research$d[[1]][[1]][29]
 
 ## Data Frames ------------------------------------------------------------
+people_data <- data.frame(
+  ladies = c("agatha", "nomvume", "anap", "nangamso"),
+  gents = c("promise", "olakunle", "faith", NA),
+  relationship = c("m", "d", "s", "s")
+)
+
+rnorm(12, mean = 1, sd = 4) |> 
+  matrix(ncol = 3)
+
+matrix(rnorm(12, mean = 1, sd = 4), ncol = 3)
+
+tree_height
+tree_diameter
+tree_volume
+
+tree <- data.frame(
+  height = tree_height,
+  diameter = tree_diameter,
+  volume = tree_volume
+)
+
+pinus_fake
+as.data.frame(pinus_fake)
+
+pinus_fake |> as.data.frame()
+
+pinus_df <- pinus_height |> 
+  as.data.frame()
+
+rownames(pinus_df) <- NULL
+pinus_df
 
 ### Check object type -----------------------------------------------------
-
+is.data.frame(people_data)
 ### Accessing -------------------------------------------------------------
+pinus_df$fertilized
+pinus_df$control
+
+
+poultry_df <- poultry |> 
+  as.data.frame()
+
+rownames(poultry_df) <- NULL
+poultry_df
+pinus_df
+
+cbind(poultry_df, pinus_df)
+
+poultry_2_df <- poultry_2 |> 
+  as.data.frame()
+
+rownames(poultry_2_df) <- NULL
+poultry_2_df
+
+poultry_2_df
+pinus_df
+
+rbind(poultry_2_df, pinus_df)
+
+
+colnames(pinus_df) <- c("starters", "growers")
+pinus_df
+poultry_data <- rbind(pinus_df, poultry_2_df)
+### Subsetting and Indexing -----------------------------------------------
+poultry_data$growers
+
+subset(poultry_data, growers > 5)
+subset(poultry_data, starters < 3.0)
 
 ### Adding items ----------------------------------------------------------
-
-### Subsetting and Indexing -----------------------------------------------
+poultry_data$finishers <- rnorm(20, 15, 4.4)
+poultry_data$finishers <- floor(poultry_data$finishers)
+poultry_data$starters <- floor(poultry_data$starters)
 
 ### Mathematical Operations -----------------------------------------------
+poultry_data$finishers <- poultry_data * 1000
+poultry_data
 
 ### Check object type -----------------------------------------------------
+
+
+# Packages ----------------------------------------------------------------
+
+#install.packages("tidyverse")
+#install.packages("ggplot2")
+
+# Load packages
+library(tidyverse)
+
+poultry <- poultry_data |> 
+  as_tibble()
+
+poultry |> 
+  select(starters, growers)
+
+poultry[, 1:2]
+
+
+# Importing Data ----------------------------------------------------------
+
+
+
+
