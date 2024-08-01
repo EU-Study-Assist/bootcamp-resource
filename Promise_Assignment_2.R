@@ -59,6 +59,8 @@ trees_only[25] # it returned NA
 ##### (e) adding “Ceiba pentandra”
 trees_only[12] <- "Ceiba pentandra"
 trees_only
+trees <- c(non_trees, trees_only)
+trees
 
 # Matrix
 
@@ -98,7 +100,7 @@ length(my_tree) # it returned 3
 
 # Question 11
 ## checking the length of trees in the list created
-length(my_tree$b) # it returns 13
+length(my_tree$b) # it returns 16
 
 # Data Frames
 
