@@ -26,13 +26,12 @@ class(14.3)
 
 #Answer for question 5, the difference between character and factor
 # Character are basic data types of string or text without any level or structure. 
-
 # Factors are a type of categorical data with fixed and limited values normally known as levels. 
 factor_vec <- factor(c("apple", "pear", "apple", "banana"))
 #levels: apple banana banana
 
 #FUNCTION TYPES 
-# 1.Yes, I got the same result, before finishing typing out the function there was a pop up box with rnorm(n=,mean= 0, sd= 1) and an explanation.  
+# 1.No, because without setting the seed, random numbers will always be different.
 
 # 2. Functions similar to rnorm function for generating numbers: 
 help.search("random numbers")
