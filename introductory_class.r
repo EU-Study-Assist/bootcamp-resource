@@ -635,10 +635,3 @@ poultry |>
   select(starters, growers)
 
 poultry[, 1:2]
-
-
-# Importing Data ----------------------------------------------------------
-
-
-
-
