@@ -101,13 +101,80 @@ class_people |>
     years = parse_number(years)
   )
 
+# components of a chart
 - "data"
-- "mapped to variables"
+- "mapped variables to aesthetics" 
 - "geometry"
 - "scales"
 - "coord"
 
-ggplot(chick_weight)
+ggplot(chick_weight, aes(weight)) +
+  geom_boxplot()
+
+summary(chick_weight)
+
+ggplot(chick_weight, aes(weight)) +
+  geom_density(
+    col = "dodgerblue3",
+    linewidth = 1
+  ) +
+  labs(
+    x = "Weight",
+    y = "Density",
+    title = "Density Distribution of Chick's Weight",
+    subtitle = "Weight is right-skewed",
+    caption = "Olamide Michael Adu @ 2024"
+  ) +
+  scale_x_log10() +
+  theme_light() +
+  theme(
+    plot.title = element_text(face = "bold", size = 16)
+  )
+  
+  
+ggplot(chick_weight, aes(weight)) +
+  geom_histogram(
+    bins = 50,
+    col = "gray",
+    fill = "tomato"
+  ) +
+  labs(
+    x = "Weight",
+    y = "Frequency",
+    title = "Distribution of Chick's Weight",
+    subtitle = "Weight is right-skewed",
+    caption = "Olamide Michael Adu @ 2024"
+  ) +
+  theme_light()
+
+
+
+
+ggplot(chick_weight, aes(Diet)) +
+  geom_bar(
+    fill = "springgreen3"
+  ) +
+  labs(
+    title = "Frequency of Chick Diets"
+  ) +
+  theme_minimal()
+
+
+chick_weight |> 
+  mutate(
+    Diet = factor(Diet, labels = c("mash",
+                                   "starter", "growers", "finishers"))
+  ) |> 
+  ggplot(aes(Diet)) +
+  geom_bar(
+    fill = "springgreen3"
+  ) +
+  labs(
+    title = "Frequency of Chick Diets"
+  ) +
+  theme_minimal()
+
+
 
 
 
@@ -116,8 +183,56 @@ plot(chick_weight$weight, type = "h")
 
 # Bivariate ---------------------------------------------------------------
 
+## Two cat
+chick_weight |> 
+  summarise(
+    .by = Diet,
+    total_weight = sum(weight),
+    average_weight = mean(weight)
+  ) |> 
+  ggplot(aes(Diet, total_weight)) +
+  geom_bar(stat = "identity")
 
 
+chick_weight |> 
+  ggplot(aes(Chick, fill = Diet)) +
+  geom_bar(position = "dodge") +
+  coord_flip()
+
+## Two Num
+chick_weight |> 
+  ggplot(aes(Time, weight)) +
+  geom_jitter(col = "indianred3") +
+  geom_smooth(col = "gray4", se = FALSE)
+
+chick_weight |> 
+  ggplot(aes(Time, weight)) +
+  geom_line() +
+  facet_grid(~Diet)
+
+cor(chick_weight$weight, chick_weight$Time)
+chick_weight |> 
+  summarize(
+    correlation = cor(weight, Time)
+  )
+
+
+## One Num and One Cat
+chick_weight |> 
+  ggplot(aes(Diet, weight)) +
+  geom_col() +
+  labs(
+    title = "Total weight from the Different Diets"
+  )
+
+chick_weight |> 
+  ggplot(aes(Diet, weight)) +
+  geom_boxplot() +
+  labs(
+    title = "Average weight from the Different Diets"
+  )
+
+summary(chick_weight)
 # Multivariate ------------------------------------------------------------
-
+chick_weight
 
