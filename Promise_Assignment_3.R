@@ -27,8 +27,8 @@ install.packages("readODS")
 # Question 5
 ## Packages for importing data from IBM SPSS and Stata
 # the 'haven' package 
-read_sav() # SPSS data
-read_dta() # Stata data
+## haven()
+# foreign()
 
 
 # File extension
