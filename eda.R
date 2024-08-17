@@ -102,11 +102,11 @@ class_people |>
   )
 
 # components of a chart
-- "data"
-- "mapped variables to aesthetics" 
-- "geometry"
-- "scales"
-- "coord"
+# - "data"
+# - "mapped variables to aesthetics" 
+# - "geometry"
+# - "scales"
+# - "coord"
 
 ggplot(chick_weight, aes(weight)) +
   geom_boxplot()
@@ -233,6 +233,148 @@ chick_weight |>
   )
 
 summary(chick_weight)
-# Multivariate ------------------------------------------------------------
-chick_weight
 
+
+# Recap -------------------------------------------------------------------
+chick_weight |> 
+  ggplot(aes(weight)) +
+  geom_density(
+    col = "aquamarine4",
+    linewidth = 1.5
+  ) +
+  labs(
+    x = "Weight",
+    y = "Density",
+    title = "Weight distribution of chicks",
+    subtitle = "Weight is right-skewed",
+    caption = "Olamide Adu @2024"
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, 400, 20)
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size=15, face = "bold", hjust = .5)
+  )
+
+colors()
+
+chick_weight |> 
+  ggplot(aes(x = Diet, y = weight)) +
+  geom_bar(
+    stat = "identity",
+    fill = "khaki3"
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 30000, 2500),
+    labels = scales::label_dollar()
+  )
+
+
+# Multivariate ------------------------------------------------------------
+chick_weight |> 
+  ggplot(aes(Time, weight, col = Diet)) +
+  geom_point(size = .5) +
+  geom_line() +
+  facet_wrap(~Chick)
+
+chick_weight |> 
+  ggplot(aes(Diet, weight, fill = Chick)) +
+  geom_boxplot()
+
+chick_max_weight <- chick_weight |> 
+  group_by(Chick, Diet) |> 
+  summarize(
+    max_time = max(Time),
+    max_weight = max(weight)
+  )
+
+chick_weight |> 
+  ggplot(aes(Time, weight, group =Chick, col = Diet)) +
+  geom_line() +
+  ggrepel::geom_text_repel(
+    data = chick_max_weight,
+    aes(x = max_time, y = max_weight, label = Chick),
+    nudge_x = 1.2,
+    nudge_y = 1.2
+  )
+
+# Inferential -------------------------------------------------------------
+
+chick_weight |> 
+  select(Chick)
+
+chick_weight |> 
+  count(Chick) |> 
+  arrange(desc(n)) |> 
+  ggplot(aes(n, fct_reorder(Chick, n))) +
+  geom_col()
+
+
+chick_weight |> 
+  count(Time) |> 
+  ggplot(aes(Time, n)) +
+  geom_line() 
+
+chick_weight |> 
+  filter(!Chick %in% c(8, 44, 15, 16, 18))
+
+chick_weight |> 
+  slice_max(Time) 
+
+day_21_weight <- chick_weight |> 
+  filter(Time == 21)
+
+# Student t-test ----------------------------------------------------------
+# market_weight = 190g 0.19kg
+
+### Two-tailed test
+## Null: The true mean weight of chicks after 3 weeks is equal to 190g
+
+## Alternative: The true mean weight of chicks after 3 weeks is not equal to 190g
+
+
+two_tailed <- t.test(day_21_weight$weight, mu = 190)
+
+### one-tail (less)
+
+## Null: The true mean weight of chicks after 3 weeks is less than 190g
+## Alternative: The true mean weight of chicks after 3 weeks is not less than 190
+
+t.test(day_21_weight$weight, mu = 190, alternative = "less") ## Null hypothesis accepted
+
+## Null: The true mean weight of chicks after 3 weeks is greater than 190g
+## Alternative: The true mean weight of chicks after 3 weeks is not greater than 190g
+
+t.test(day_21_weight$weight, mu = 190, alternative = "greater") # Alternative hypothesis accepted
+
+# Independent t-test/ Two-sample t-test -----------------------------------
+falcon <- stats4nr::falcon
+falcon
+
+# hypothesis
+# Null: The average tail length of male and female falcon is the same
+# tilde
+
+t.test(tail ~ sex, data = falcon)
+#t.test(data$column ~ data$column_1)
+#t.test(falcon$F ~ falcon$M)
+
+# two groups are always compared.
+unique(chick_weight$Diet)
+
+# ANOVA (Analysis of Variance) --------------------------------------------
+chick_aov <- aov(weight ~ Diet - 1, data = chick_weight) |> 
+  anova()
+
+chick_aov
+# Linear regression -------------------------------------------------------
+chick_ml <- lm(weight ~ Diet - 1, data = chick_weight)
+summary(chick_ml)
+
+
+lm(weight ~ Diet + Time , data = chick_weight) |> 
+  summary()
+
+lm(log(weight) ~ Diet + Time + Diet:Time, data = chick_weight) |> 
+  summary()
