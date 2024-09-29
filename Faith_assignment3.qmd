@@ -1,0 +1,162 @@
+---
+title: "Faith_assignment3"
+format: html
+editor: visual
+---
+
+1.  In your words how would you briefly define packages
+
+    ## A package is a set of library/program that contains certain functions, data that are used for a particular function in base R.
+
+2.  What function do you use to install packages in R
+
+    ```{install.packages()}
+
+    ```
+
+3.  After installation, what are two ways to use packages in R
+
+    ```{library()}
+    require()
+
+    ```
+
+4.  Install the following packages: a. tidyverse  b. readxl  c. googlesheets4  d. readODS
+
+    ```{install.packages('tidyverse', 'readxl', 'googlesheets4', 'readODS')}
+
+    ```
+
+5.  What package(s) can you use to import data from IBM SPSS, and Stata.
+
+    ```{library(haven)}
+    ```
+
+6.   What is/are the main file extension(s) of the following data analysis software: a. Microsoft Excel  b. LibreOffice Calc  c. Stata  d. IBMSPSS  e. Google Sheets
+
+    ## Microsoft excel
+
+    '.xls'
+
+    '.xlsx'
+
+    ## LibreOffice Calc
+
+    '.ods'
+
+    ## Stata
+
+    '.do'
+
+    '.dta'
+
+    ## IBMSPSS
+
+    '.sav'
+
+    ## Google Sheets
+
+    '.gsheet'
+
+7.  How does GoogleSheets differ from the above analysis software?
+
+    ## Google sheets is a cloud based software which makes its different from an application software
+
+8.  What is the difference between “.txt” and ”.csv” files
+
+    ## txt are data that are separated by tab while csv are data that are separated by a comma.
+
+9.  Using the tidyverse package read the fao_wood_export_data.csv file found in the data folder.
+
+    ```{fao_wood_export_data <- read.csv('fao_wood_export_data.csv')}
+    head(fao_wood_export_data)
+    ```
+
+10. What is the file extension?
+
+    ## Comma Separated Values
+
+11. Print the first 6 observations of the file
+
+    ```{head(fao_wood_export_data)}
+
+    ```
+
+12. What is the delimiter of the file?
+
+    ## The delimiter is a Comma
+
+13. Using the pipe operator, preview the last 6 observations of the data
+
+    ```{fao_wood_export_data |>}
+      tail()
+
+    ```
+
+14. Correctly import the North-East Atlantic Catches sheet of the Versions_log.xlsx excel file into RStudio. Give the data a name of your choosing. With the data return:
+
+15. the first 6 observations
+
+    ```{library(readxl)}
+    Ne_atlantic <- read_excel('Versions_log.xlsx', sheet = 'North East Atlantic Catches')
+    head(Ne_atlantic)
+
+
+    ```
+
+16. the last 6 observations
+
+    ```{tail(Ne_atlantic)}
+    Random_atlantic <- Ne_atlantic |> 
+      sample(n = 10, replace = FALSE)
+
+    ```
+
+17.  Using the same file,Versions_log.xlsx import sheet 4 and 5 giving them appropriate
+
+18. variable names.
+
+    ```{sheet4 <- read_excel('Versions_log.xlsx', sheet = 4)}
+    sheet5 <- read_excel('Versions_log.xlsx', sheet = 5)
+    ```
+
+19. Ensure you print the first 6 observations
+
+    ```{sheet4 |>}
+      head()
+    sheet5 |> 
+      head()
+
+    ```
+
+20. Import the data in the third sheet of the file Ch2_Timber.ods andgive it a suitable variable name. Print the data after you done,.
+
+    ```{library(readODS)}
+    ch_timber3 <- read_ods('Ch2_Timber.ods', sheet = 'Table_2_1a', skip = 4)
+    ```
+
+21. Import the sheet named Table_2_7b from the Ch2_Timber.ods. Give the data a suitable name and print after all
+
+    ```{ch_timber4 <- read_ods('Ch2_Timber.ods', sheet = 'Table_2_7b', skip = 4)}
+
+    ```
+
+22.  Import the plot_11_tvol.txt data. How many distinct site and plot does the data have?
+
+    ```{plot_data <- read.delim('plot_11_tvol.txt')}
+    length(plot_data$site)
+    length(plot_data$plot)
+    ```
+
+23.  Is any of the variable in plot11 having missing data
+
+    ```{unique(is.na(plot_data))}
+    ```
+
+24. Import the data on black cherry trees with the google sheet id 1l7COpPs5Zy8X0nnw0grnWgB1o79uwRmK1ncqtm56AE. Save it as black_cherry and print the first 6 observations.
+
+    ```{library(googlesheets4)}
+    black_cherry_tree <- read_sheet('1l7COpPs5Zy8X0nnw0grnWgB1o79uwRmK1ncqtm56AE')
+    black_cherry_tree |>
+      head()
+    ```
