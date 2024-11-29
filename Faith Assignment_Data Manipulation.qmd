@@ -1,0 +1,176 @@
+---
+title: "Faith Assignment(4): Data Manipulation"
+author: "Faith Oyewale OLABISI"
+format: html
+editor: visual
+toc: true
+toc-depth: 3
+toc-title: Data Manipulation with R
+---
+
+## Data Manipulation Assignment
+
+### **Questions1**
+
+1.  Import the data from the file asfis_sp_2023.txt into R. Using the data, answer the following:
+
+    ```{r}
+    #| message: false
+    #| warning: false
+    library(tidyverse)
+    library(janitor)
+    library(knitr)
+    Fish_data <- read_delim('data/ASFIS_sp_2023.txt')
+
+    Fish_data |> 
+      kable()
+
+    Fish_data |> 
+      head()
+    view(Fish_data)
+    ```
+
+2.  How many columns does the data have
+
+    ```{r}
+    dim(Fish_data)
+    Fish_data |> 
+      ncol()
+    ```
+
+3.  How rows does the data have.
+
+    ```{r}
+    dim(Fish_data)
+    Fish_data |> 
+      nrow()
+    ```
+
+4.  Print the 10 most occurring families in the dataset. Tip: read about the slice_max function of dplyr.
+
+    ```{r}
+    Fish_data |> 
+      count(Family) |> 
+      slice_max(n, n = 10) |> 
+      kable()
+
+    ```
+
+5.  What are the 10 least occurring isscaap_group
+
+    ```{r}
+    Fish_data |> 
+      count(ISSCAAP_Group) |> 
+      slice_min(n, n = 10) |> 
+      kable()
+    ```
+
+### **Questions 2**
+
+-   Using the asfis dataset, group the data by the order column. For each group, calculate the number of unique values in the isscaap_group, taxonomic_code, and alpha3_code columns. Arrange the results in descending order based on the number of unique values that alpha3_code is having. Hint: You may find the functions group_by, summarize, length, and arrange function.
+
+1.  How many fish are having french names?
+
+    ```{r}
+    #| label: tbl-french-names
+    #| tbl-cap: 'Family with Name'
+
+    Fish_data |> 
+      group_by(Order) |> 
+      summarise(
+      ISSCAAP_Group = length(unique(ISSCAAP_Group)),
+      Taxonomic_Code = length(unique(Taxonomic_Code)),
+      Alpha3_Code = length(unique(Alpha3_Code)) 
+      ) |> 
+      arrange(desc(Alpha3_Code)) |> 
+      kable()
+      
+      
+    ```
+
+```{r}
+Fish_data |> 
+  names()
+head(Fish_data)
+Fish_data |> 
+  select(English_name, French_name) |> 
+  filter(!is.na(French_name)) |>
+  count()
+  
+```
+
+2.  How many fish is having all the common names in the asfis data
+
+    ```{r}
+    Fish_data |> 
+      head()
+    Fish_data |> 
+      car::some()
+
+    Fish_data |> 
+      select(ends_with('name'), -Scientific_Name) |> 
+      drop_na() |> 
+      count()
+    ```
+
+3.  Create a new variable variable called order_lower. This new variable value should be the order column in lower case.
+
+    ```{r}
+    Fish_data |> 
+      mutate(
+        order_lower = tolower(Order)
+      )
+    ```
+
+4.  Using the asfis dataset, filter the dataset to include only the rows where the order_lower column is \*pelecaniformes\* and ensure the \*\*spanish_name\*\* column is without a missing data.
+
+    ```{r}
+    Fish_data |> 
+      mutate(order_lower = tolower(Order)) |> 
+      filter(order_lower == 'pelecaniformes'& !is.na(Spanish_name)) |> 
+      kable()
+    ```
+
+5.  With the asfis dataset, filter the dataset to include only the rows where the order_lower column is either “bryozoa” or “squamate”. Group the filtered data by the family column. For each group, calculate the number of rows in that group. Filter the groups to include only those with more than 1 row. Arrange the results in descending order based on the count.
+
+    ```{r}
+    Fish_data |> 
+      mutate(order_lower = tolower(Order)) |> 
+      filter(order_lower == 'bryozoa' | order_lower == 'squamate') |> 
+      group_by(Family) |> 
+      summarise(
+        count = n()
+      ) |> 
+      filter(count > 1) |> 
+      arrange(desc(count)) |> 
+      kable()
+    ```
+
+6.  Count the number of authors that gave fish a scientific name and arrange them in descending order according to the number of fishes they named. Did you notice anything unusual when you checked your result
+
+    ```{r}
+    Fish_data |> 
+      group_by(Author) |> 
+      summarise(
+        count_author = n()
+      ) |> 
+      arrange(desc(count_author)) |> 
+      nrow()
+
+    ```
+
+7.  Count the family and return the families that are greater than or equal to 100. After that, count the number of families that fits this criteria.
+
+    ```{r}
+    Fish_data |> 
+      count(Family) |> 
+      filter(n >= 100) |> 
+      count(Family) |> 
+      nrow()
+    ```
+
+8.  Read the ICESCatchDataset2006-2021.csv dataset and ensure 0 is imported as NA. Print a preview of this data
+
+9.  Is every observation having a missing data?
+
+10. If you have an observation with a complete data, return that data.
